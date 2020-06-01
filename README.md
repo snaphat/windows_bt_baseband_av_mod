@@ -5,7 +5,7 @@ Description
 
 [Baseband](https://www.bluetooth.com/specifications/assigned-numbers/baseband/) modification for Windows to switch the Major Device Class to Audio/Video.
 
-This registry modification switches Windows 10 to present itself as an Audio/Video device. This can be useful for bluetooth audio transmitters that refuse to pair to anything but devices that identify their main function as Audio/Video to enable these devices to stream Audio to Windows 10 (Note: [Windows 10 version 2004](https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-2004) or higher is required for [remote playback](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/enable-remote-audio-playback)).
+This [registry modification](https://docs.microsoft.com/en-us/windows-hardware/drivers/bluetooth/bluetooth-registry-entries) switches Windows 10 to present itself as an Audio/Video device. This can be useful for bluetooth audio transmitters that refuse to pair to anything but devices that identify their main function as Audio/Video to enable these devices to stream Audio to Windows 10 (Note: [Windows 10 version 2004](https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-2004) or higher is required for [remote playback](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/enable-remote-audio-playback)).
 
 Installation
 -
@@ -25,6 +25,11 @@ Known Devices that Benefit
 
 Additional Notes
 -
-The same type of baseband modification will work for Linux's bluetooth stack as well. But, I was unable to get the Linux A2DP sink role to work reliably during my testing with Linux.
+* The *COD Major* and *COD Type* registry entries don't appear to behave exactly as documented by Microsoft.
+  * COD Major entry appears to be ignored if COD Type entry exists.
+  * COD Type will actually result in bits 8 and bit 9 of the baseband (part of the Major Device Class) being set if the registry entry is a value above 7F (hex) and below 100 (hex).
+  * COD Type values higher than FF (hex) (an invalid number) will result in COD minor class being set to 0, not 1 (COD_COMPUTER_MINOR_DESKTOP) as MS indicates in the documentation. 
+* Android applications that display COD can be used to aid in debugging which type is returned for which value.
+* The same type of baseband modification will work for Linux's bluetooth stack as well. But, I was unable to get the Linux A2DP sink role to work reliably during my testing with Linux.
 
 

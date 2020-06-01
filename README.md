@@ -14,6 +14,12 @@ Download [audio_video_bt.reg](https://raw.githubusercontent.com/snaphat/windows_
 1. Right-click the link and Select *Save target as* or *Save link as*:
 2. Then run the file to add the modifications to your Windows Registry.
 
+Uninstallation
+-
+Download [audio_video_bt_del.reg](https://raw.githubusercontent.com/snaphat/windows_bt_baseband_av_mod/master/audio_video_bt_del.reg):
+1. Right-click the link and Select *Save target as* or *Save link as*:
+2. Then run the file to add the modifications to your Windows Registry.
+
 Known Devices that Benefit
 -
 HomeSpot Bluetooth 5.0 Audio Transmitter Adapter with USB C Connector

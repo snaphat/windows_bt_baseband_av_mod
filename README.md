@@ -22,5 +22,5 @@ Download [audio_video_bt_del.reg](https://raw.githubusercontent.com/snaphat/wind
 
 Known Devices that Benefit
 -
-HomeSpot Bluetooth 5.0 Audio Transmitter Adapter with USB C Connector
+* HomeSpot Bluetooth 5.0 Audio Transmitter Adapter with USB C Connector
 

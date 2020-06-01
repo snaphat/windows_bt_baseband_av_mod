@@ -10,7 +10,9 @@ This registry modification switches Windows 10 to present itself as an Audio/Vid
 
 Installation
 -
-Download [audio_video_bt.reg](https://raw.githubusercontent.com/snaphat/windows_bt_baseband_av_mod/master/audio_video_bt.reg) and run it.
+Download [audio_video_bt.reg](https://raw.githubusercontent.com/snaphat/windows_bt_baseband_av_mod/master/audio_video_bt.reg):
+1. Right-click the link and Select *Save target as* or *Save link as*:
+2. Then run the file to add the modifications to your Windows Registry.
 
 Known Devices that Benefit
 -

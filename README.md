@@ -25,9 +25,9 @@ Known Devices that Benefit
 
 Additional Notes
 -
-* The *COD Major* and *COD Type* registry entries don't appear to behave exactly as documented by Microsoft.
+* The *COD Major* and *COD Type* registry entries don't appear to behave exactly as documented by Microsoft. I surmise that these entries have rarely been utilized as of this writing since they appear to be buggy.
   * COD Major entry appears to be ignored if COD Type entry exists.
-  * COD Type will actually result in bits 8 and bit 9 of the baseband (part of the Major Device Class) being set if the registry entry is a value above 7F (hex) and below 100 (hex).
+  * COD Type will actually result in bits 8 and bit 9 of the baseband (part of the Major Device Class) being set if the registry entry is a value above 7F (hex) and below 100 (hex). COD Type is suppose to only set the Minor Device Class according to the documentaiton.
   * COD Type values higher than FF (hex) (an invalid number) will result in COD minor class being set to 0, not 1 (COD_COMPUTER_MINOR_DESKTOP) as MS indicates in the documentation. 
 * Android applications that display COD can be used to aid in debugging which type is returned for which value.
 * The same type of baseband modification will work for Linux's bluetooth stack as well. But, I was unable to get the Linux A2DP sink role to work reliably during my testing with Linux.
